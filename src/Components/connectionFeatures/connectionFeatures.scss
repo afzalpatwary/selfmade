@@ -1,0 +1,11 @@
+.ConnectionFeatures {
+    background: linear-gradient(108.24deg, #FFEFED 7.25%, #FFF9F2 35.77%, #FFF0EE 62.56%, #FFF8F7 90.22%);
+}
+.singleConnection{
+    box-shadow: 15px 8px 30px rgba(134, 64, 38, 0.05);
+    border: 1px solid transparent;
+    transition: all 0.3s linear;
+    &:hover{
+        border-color: #FFB64F;
+    }
+}

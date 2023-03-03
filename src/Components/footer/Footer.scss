@@ -1,0 +1,45 @@
+.footer {
+    .subscribe {
+        .form-control {
+            height: 48px;
+        }
+
+        .btn {
+            top: 6px;
+            right: 6px;
+            transition: all 0.3s linear;
+
+            &:hover {
+                background-color: var(--orange);
+                color: #fff;
+            }
+        }
+    }
+
+    .footerTop {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
+        .widgetMenu {
+            .link {
+                transition: all 0.3s linear;
+
+                &:hover {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}
+
+.social {
+    .singleSocial {
+        width: 24px;
+        height: 24px;
+        transition: all 0.3s linear;
+        background-color: var(--gray);
+
+        &:hover {
+            background-color: var(--yellow);
+        }
+    }
+}

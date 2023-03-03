@@ -1,0 +1,25 @@
+.singlePlan{
+    cursor: pointer;
+    box-shadow: 0px 20px 30px rgba(16, 18, 32, 0.05);
+    .planCaption{
+        border-radius: 16px 16px 0 0;
+    }
+    .oldPrice{
+        text-decoration: line-through;
+    }
+    .smBtn{
+        .btn{
+            &.brBtn{
+                border-color: var(--blue);
+                height: 40px;
+            }
+        }
+    }
+    &:hover{
+        .brBtn{
+            background-color: var(--yellow) !important;
+            border-color: var(--yellow) !important;
+            color: var(--dark) !important;
+        }
+    }
+}

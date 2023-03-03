@@ -1,0 +1,32 @@
+.testimonials{
+    .slick-slide {
+        margin: 50px 0 70px;
+    }
+}
+
+
+.BgLightWhite{
+    background-color: #C8CAD5;
+}
+.testimonialItem {
+    box-shadow: -5px 5px 20px rgba(60, 30, 20, 0.03);
+    min-height: 560px;
+
+    .personImg {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+        background-image: linear-gradient(transparent, #FEF3F1);
+    }
+
+    .QuoteIcon {
+        width: 60px;
+        height: 60px;
+        background-image: linear-gradient(#F7EAE7, transparent);
+        bottom: -35px;
+        right: 25px;
+    }
+}
+.slick-slider{
+    margin-bottom: 20px;
+}

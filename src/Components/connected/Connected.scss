@@ -1,0 +1,23 @@
+.Connected {
+    counter-reset: numberCount;
+        .secInnerTitle{
+            margin-top: -24px;
+        }
+    .numberCount {
+        .Count {
+            font-size: 202px;
+            background: linear-gradient(180deg, #534DD2 0%, rgba(102, 96, 235, 0) 100%);
+            opacity: 0.1;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-text-fill-color: transparent;
+            line-height: 150px;
+
+            &::before {
+                counter-increment: numberCount;
+                content: "0" counter(numberCount);
+            }
+        }
+    }
+}

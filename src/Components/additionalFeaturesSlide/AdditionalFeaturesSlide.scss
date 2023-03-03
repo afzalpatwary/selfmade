@@ -1,0 +1,71 @@
+.additionalFeaturesSlide {
+    overflow: hidden;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-image: url(../../assets/img/adfShapeL.png), url(../../assets/img/adfShapeR.png);
+    background-repeat: no-repeat;
+    background-position: 0 15%, 100% 100%;
+
+    .slick-slider {
+        @media (min-width:1200px) {
+            max-width: 1930px;
+            margin-right: -260px;
+            margin-left: auto;
+        }
+
+        .slick-list {
+            overflow: hidden;
+        }
+
+        .slick-slide {
+            padding: 30px 10px;
+            opacity: 1;
+        }
+
+        .slick-dots {
+            @media (min-width:1200px) {
+                display: none !important;
+            }
+            bottom: initial;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            bottom: -50px !important;
+
+            &.slick-prev {
+                left: 35%;
+
+                @media only screen and (min-width: 1200px) and (max-width: 1669px)  {
+                    left: 40% !important;
+                }
+               
+                @media (min-width:1400px) {
+                    left: 33%;
+                }
+               
+                top: initial;
+                bottom: 0;
+            }
+
+            &.slick-next {
+                right: 52%;
+               
+                @media (min-width:1400px) {
+                    right: 58%;
+                }
+                @media only screen and (min-width: 1200px) and (max-width: 1669px)  {
+                    right: 50% !important;
+                }
+               
+                top: initial;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.additionalFeaturesItem {
+    min-height: 320px;
+    box-shadow: -5px 5px 20px rgba(60, 30, 20, 0.03);
+}

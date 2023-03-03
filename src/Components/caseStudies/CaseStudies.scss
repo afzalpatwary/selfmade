@@ -1,0 +1,79 @@
+.CaseStudies {
+    .slick-dots {
+        @media (min-width:1200px) {
+            display: none !important;
+        }
+    }
+
+    .slick-slide {
+        margin: 10px 0 30px;
+    }
+}
+
+.caseStudiesItem {
+    // box-shadow: -5px 5px 20px rgba(60, 30, 20, 0.03);
+    box-shadow: 7px 10px 20px rgba(0, 25, 50, 0.03);
+    cursor: pointer;
+
+    .caseImg {
+        max-width: 100%;
+        .categories {
+            top: 15px;
+            right: 15px;
+        }
+        img{
+            transition: all 0.3s linear;
+        }
+    }
+    .testDecs {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1; /* number of lines to show */
+                line-clamp: 1; 
+        -webkit-box-orient: vertical;
+     }
+
+     .categories{
+        transition: all 0.3s linear;
+     }
+
+    .personImg {
+        width: 66px;
+        height: 66px;
+        margin-top: -33px;
+        img{
+            transition: all 0.3s linear;
+        }
+    }
+
+    .btn {
+        transition: all 0.3s linear;
+        svg  {
+            transition: all 0.3s linear;
+        }
+    }
+
+    &:hover {
+        .caseImg{
+            img{
+                transform: scale(1.1);
+            }
+        }
+        .personImg {
+            img{
+                transform: scale(1.1) rotate(10deg);
+            }
+        }
+        .btn {
+            background: var(--orange);
+            color: #fff;
+            svg * {
+                fill: #fff
+            }
+        }
+        .categories{
+            background-color: var(--yellow);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+nav{
+    z-index: 9999;
+    @media (max-width:1200px) {
+        background-image: url('../../assets/img/banner-bg.png') !important;
+        background-repeat: no-repeat;
+    }
+    .smBtn{
+        .btn{
+            height: 40px;
+            line-height: 24px;
+        }
+    }
+}
+
+.navbar-nav {
+    .nLink {
+        transition: all 0.3s linear;
+
+        &:hover {
+            color: var(--yellow) !important;
+        }
+    }
+}
+.navbar-toggler-icon{
+    background-image: url('../../assets/img/bar.svg') !important;
+    background-repeat: no-repeat;
+}
+
+.stickyHeader{
+    background-color: #07043a;
+    transition: all 0.3s linear;
+}

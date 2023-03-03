@@ -1,0 +1,603 @@
+// import google fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Rufina:wght@400;700&display=swap');
+// import google fonts -END
+
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden !important;
+    counter-reset: stepCounter;
+
+    &.modal-open {
+        overflow-y: auto;
+        padding-right: 0;
+    }
+}
+
+:root {
+    --yellow: #FFD335;
+    --gray: #525256;
+    --gray2: #747476;
+    --gray3: #F6F6F6;
+    --gray4: #B1B0B7;
+    --grayLight: #C8C7E6;
+    --pink: #FF439D;
+    --pinkLight: #E04E71;
+    --dark: #1A1A1C;
+    --black: #0F0E24;
+    --purple: #5652AE;
+    --purple2: #5E59D4;
+    --purpleLight: #716DC2;
+    --purpleLight2: #E2E1F7;
+    --blue: #201C70;
+    --blueDark: #174A61;
+    --orange: #C45312;
+    --orangeLight: #F9EEE7;
+    --green: #5BD459;
+    --greenLight: #E4F5E1;
+    --Light: #F1F3F6;
+    --Light2: #FCEDF1;
+
+}
+
+/* reset, root - END */
+
+// container resize
+.container {
+    @media (min-width: 1500px) {
+        max-width: 1440px;
+    }
+}
+
+.smallContainer {
+    padding-left: 12px;
+    padding-right: 12px;
+
+    @media (min-width: 1400px) {
+        max-width: 1240px;
+    }
+}
+
+// container resize - end
+
+/* helper , base classes */
+
+
+// text color classes
+
+.textYellow {
+    color: var(--yellow);
+}
+
+.textGray {
+    color: var(--gray);
+}
+
+.textGray2 {
+    color: var(--gray2);
+}
+
+.textGray3 {
+    color: var(--gray3);
+}
+
+.textGray4 {
+    color: var(--gray4);
+}
+
+.textGrayLight {
+    color: var(--grayLight);
+}
+
+.textPink {
+    color: var(--pink);
+}
+
+.textPinkLight {
+    color: var(--pinkLight);
+}
+
+.textDark {
+    color: var(--dark);
+}
+
+.textBlack {
+    color: var(--black);
+}
+
+.textPurple {
+    color: var(--purple);
+}
+
+.textPurple2 {
+    color: var(--purple2);
+}
+
+.textPurpleLight {
+    color: var(--purpleLight);
+}
+
+.textPurpleLight2 {
+    color: var(--purpleLight2);
+}
+
+.textBlue {
+    color: var(--blue);
+}
+
+.textOrange {
+    color: var(--orange);
+}
+
+.textOrangeLight {
+    color: var(--orangeLight);
+}
+
+.textGreen {
+    color: var(--green);
+}
+
+.textGreenLight {
+    color: var(--greenLight);
+}
+
+.textLight {
+    color: var(--Light);
+}
+
+.textOfWhite {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+// BG Color classes
+
+.bgYellow {
+    background-color: var(--yellow);
+}
+
+.bgGray {
+    background-color: var(--gray);
+}
+
+.bgGray2 {
+    background-color: var(--gray2);
+}
+
+.bgGray3 {
+    background-color: var(--gray3);
+}
+
+.bgGrayLight {
+    background-color: var(--grayLight);
+}
+
+.bgPink {
+    background-color: var(--pink);
+}
+
+.bgPinkLight2 {
+    background-color: var(--pinkLight);
+}
+
+.bgDark {
+    background-color: var(--dark);
+}
+
+.bgBlack {
+    background-color: var(--black);
+}
+
+.bgPurple {
+    background-color: var(--purple);
+}
+
+.bgPurple2 {
+    background-color: var(--purple2);
+}
+
+.bgPurpleLight {
+    background-color: var(--purpleLight);
+}
+
+.bgPurpleLight2 {
+    background-color: var(--purpleLight2);
+}
+.bgPurpleRgba {
+    background-color: rgba(94, 89, 213, 0.1);
+}
+
+
+.bgBlue {
+    background-color: var(--blue) !important;
+}
+.bgBlueDark {
+    background-color: var(--blueDark);
+}
+
+.bgOrange {
+    background-color: var(--orange);
+}
+
+.bgOrangeLight {
+    background-color: var(--orangeLight);
+}
+
+.bgGreen {
+    background-color: var(--green);
+}
+
+.bgGreenLight {
+    background-color: var(--greenLight);
+}
+
+.bgLight {
+    background-color: var(--Light);
+}
+
+.bgOfWhite {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.bgPinkLight {
+    background: rgba(255, 117, 183, 0.15);
+}
+
+.bgLight2 {
+    background-color: var(--Light2);
+}
+
+.bgOffWhite {
+    background: linear-gradient(108.24deg, #FFEFED 7.25%, #FFF9F2 35.77%, #FFF0EE 62.56%, #FFF8F7 90.22%);
+}
+
+
+//custom font-size 
+.fs-12 {
+    font-size: 12px;
+    line-height: 22px;
+}
+
+.fs-13 {
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.fs-14 {
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.fs-15 {
+    font-size: 15px;
+    line-height: 22px;
+}
+
+.fs-17 {
+    font-size: 17px;
+    line-height: 23px;
+
+    @media (max-width: 1400px) {
+        font-size: 14px;
+        line-height: 23px
+    }
+}
+
+.fs-18 {
+    font-size: 18px;
+    line-height: 28px;
+
+    @media (max-width: 991px) {
+        font-size: 16px;
+        line-height: 22px
+    }
+
+    @media (max-width: 575px) {
+        font-size: 14px;
+        line-height: 20px
+    }
+}
+
+.fs-22 {
+    font-size: 22px;
+    line-height: 34px;
+
+    @media (max-width: 991px) {
+        font-size: 22px;
+        line-height: 28px
+    }
+}
+
+.fs-30 {
+    font-size: 30px;
+    line-height: 40px;
+
+    @media (max-width: 991px) {
+        font-size: 25px;
+        line-height: 30px
+    }
+}
+
+.fs-36 {
+    font-size: 36px;
+    line-height: 46px;
+
+    @media (max-width: 991px) {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+.fs-48 {
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: 991px) {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+
+.fs-4{
+    @media (max-width:991px) {
+        font-size: 18px !important;
+    }
+}
+
+.fs-54 {
+    font-size: 54px;
+    line-height: 3.37rem;
+
+    @media (max-width: 991px) {
+        font-size: 45px;
+        line-height: 3rem;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 40px;
+        line-height: 2.5rem;
+    }
+}
+
+.fs-62 {
+    font-size: 62px;
+    line-height: 72px;
+
+    @media (max-width: 991px) {
+        font-size: 50px;
+        line-height: 60px;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 36px;
+        line-height: 50px;
+    }
+}
+
+.ls {
+    letter-spacing: 0.02em
+}
+
+.fwMedium {
+    font-weight: 500;
+}
+
+.fwSemiBold {
+    font-weight: 600;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.fwBlack {
+    font-weight: 900;
+}
+
+.boxShadow {
+    box-shadow: -5px 5px 20px rgba(60, 30, 20, 0.03);
+}
+
+.boxShadow2 {
+    box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.05);
+}
+
+.radius2 {
+    border-radius: 2px;
+}
+
+.radius8 {
+    border-radius: 8px;
+}
+
+.radius10 {
+    border-radius: 10px;
+}
+
+.radius12 {
+    border-radius: 12px;
+}
+
+.radius16 {
+    border-radius: 16px;
+
+}
+
+.ff-rufina {
+    font-family: 'Rufina', serif;
+}
+
+.py-150{
+    padding: 150px 0;
+}
+
+.pt-200{
+    padding-top: 200px !important;
+}
+
+.smBtn {
+    .btn {
+        height: 48px;
+        transition: all 0.2s linear;
+
+        svg {
+            transition: all 0.2s linear;
+        }
+
+        &:hover {
+            transform: translateY(-1px);
+            color: var(--yellow)
+        }
+
+        &.isBg-btn {
+            &:hover {
+                background-color: var(--orange);
+                color: #fff;
+
+                svg * {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &.brBtn {
+            border: 1.5px solid #FFD335;
+        }
+    }
+
+}
+
+.form-select {
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.sectionPadding {
+    padding: 100px 0;
+
+    @media (max-width: 991px) {
+        padding: 70px 0;
+    }
+}
+
+
+p {
+    margin-bottom: 0;
+}
+
+.mt-100 {
+    margin-top: 100px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+.pb-70 {
+    padding-bottom: 70px;
+}
+
+.navbar-toggler,
+.btn,
+button,
+.form-control,
+a {
+    &:focus {
+        box-shadow: none !important;
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none !important;
+    transition: all 0.3s linear;
+
+    &:hover {
+        color: var(--orange);
+    }
+}
+
+.isBgImage {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.w-50 {
+    @media (max-width: 1024px) {
+        width: 100% !important;
+    }
+}
+
+/* helper , base classes  - END*/
+
+
+
+
+/* slick-slider */
+.slick-slider {
+    .slick-slide {
+        padding: 0px 20px;
+        @media (max-width:991px) {
+            padding: 40px 10px;
+        }
+    }
+
+    .slick-arrow {
+        @media (max-width:1200px) {
+            display: none !important;
+        }
+
+        width: 70px;
+
+        &.slick-prev {
+            z-index: 10;
+
+            @media (min-width:1550px) {
+                left: -90px;
+            }
+        }
+
+        &.slick-next {
+            @media (min-width:1550px) {
+                right: -90px;
+            }
+        }
+    }
+
+    .slick-dots {
+        li {
+            button {
+                background-color: #FCEEEA;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+
+                &::before {
+                    color: transparent !important;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background-color: #EDC2AD;
+                }
+            }
+        }
+    }
+}
+
+/* slick-slider  - END*/
+

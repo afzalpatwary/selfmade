@@ -1,0 +1,292 @@
+
+.loginForm{
+    .formBox{
+        min-height: 830px;
+    }
+}
+
+.pageWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // align-items: center;
+    // justify-content: center;
+
+    @media (max-width:991px) {
+        grid-template-columns: 1fr;
+    }
+
+    .formFeatured {
+        // background: linear-gradient(180deg, #201C70 0%, #201C70 100%);
+        background-image: url(../../assets/img/formFeaturedBg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 77.5px 0;
+        min-height: 929px;
+
+        @media (max-width:991px) {
+            min-height: 720px;
+        }
+
+        .formIntro {
+            opacity: 0.8
+        }
+
+        // .formFeaturedImg{
+        //     max-width: 800px;
+        // }
+    }
+
+    .formInfo {
+        background-image: url(../../assets/img/formBg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .formWrapper {
+            box-shadow: 0px 30px 80px rgba(25, 23, 34, 0.1);
+            max-width: 445px;
+            width: 100%;
+            padding: 40px;
+
+            .form-control {
+                height: 49px;
+
+                &:focus {
+                    background-color: var(--Light);
+                }
+            }
+
+            .eye {
+                right: 15px;
+                top: 17px;
+                cursor: pointer;
+
+                &.eyeVisible {
+                    display: none;
+                }
+            }
+
+            .form-check-input {
+                &:checked {
+                    background-color: var(--green);
+                    border-color: var(--green);
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .form-check-label {
+                cursor: pointer;
+            }
+
+            .btn {
+                transition: all 0.3s linear;
+                height: 48px;
+
+                &:hover {
+                    background-color: var(--orange);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.stepFormMain {
+    .pageWrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        // min-height: 833px;
+
+        .formInfo {
+            background-position: center;
+            background-size: auto;
+
+            .formStepParent {
+                max-width: 445px;
+                width: 100%;
+                margin: 0px auto 0;
+            }
+        }
+    }
+}
+
+// formSteps 
+.formSteps {
+    .stepList {
+        position: relative;
+        overflow: hidden;
+
+        .singleSteps {
+            .stepNumber {
+                width: 40px;
+                height: 40px;
+                border: 1px solid #67AD5B;
+                display: block;
+                border-radius: 50%;
+                line-height: 40px;
+                text-align: center;
+                color: var(--green);
+                font-weight: 700;
+                font-size: 16px;
+                background-color: var(--greenLight);
+                z-index: 10;
+                position: relative;
+                transition: all 0.3s linear;
+            }
+
+            &.stepRunning {
+                .stepNumber {
+                    background-color: #67AD5B;
+                    color: #fff;
+                }
+
+                
+
+                &:last-child {
+                    .stepDoneLine {
+                        background-color: transparent;
+                    }
+                }
+            }
+
+            &.stepCompleted {
+                .stepNumber {
+                    font-size: 0;
+                    background-image: url(../../assets/img/tickIcon.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-color: #67AD5B;
+                }
+                .runningStepLine {
+                    height: 2px;
+                    width: 30%;
+                    background-color: #67AD5B;
+                    top: 20px;
+                    z-index: 9;
+                    position: absolute;
+                    transition: all 0.3s linear;
+                }
+            }
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: var(--greenLight);
+            top: 20px;
+            z-index: 1;
+        }
+    }
+}
+
+// formSteps  -End
+
+
+// selectPackage
+.stepBgImg{
+    background-image: url(../../assets/img/selectPackageBg.png);
+    .formInfo{
+        background-image: none;
+    }
+}
+.selectPackage {
+    .nav-pills {
+        max-width: 216px;
+        height: 41px;
+
+        .nav-item {
+            .nav-link {
+                transition: all 0.3s linear;
+                text-transform: lowercase;
+
+                .tickIcon {
+                    transition: all 0.3s linear;
+                }
+
+                &.active {
+                    background-color: #201C70;
+                    text-transform: capitalize;
+
+                    .tickIcon {
+                        display: inline-block !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .singlePlan {
+        box-shadow: 0px 20px 40px rgba(26, 26, 28, 0.07);
+
+        .planBody {
+            padding: 30px;
+        }
+    }
+
+    .prosConsList {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            background-repeat: no-repeat;
+            background-position: 0 top;
+
+            &.pros {
+                background-image: url(../../assets/img/checkIcon.svg);
+            }
+
+            &.cons {
+                background-image: url(../../assets/img/consIcon.svg);
+            }
+        }
+    }
+}
+// selectPackage -ENd
+
+
+
+
+
+// paymentsGetWay
+.paymentsGetWay{
+    .formWrapper{
+        max-width: 890px !important;
+        width: 100% !important;
+    }
+    .promoCode{
+        .btn{
+            border: 1px solid var(--blue);
+            &:hover{
+                border-color: var(--orange) ;
+            }
+        }
+    }
+}
+// paymentsGetWay -End
+
+
+// success 
+.success{
+    .formWrapper{
+        max-width: 599px !important;
+        width: 100% !important;
+    }
+}
+// success -End
+
+.selectPackage{
+    input{
+        &:checked ~ {
+            .singlePlan{
+                border: 1px solid var(--blue);
+            }
+        } 
+    }
+}

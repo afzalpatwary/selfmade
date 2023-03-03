@@ -1,0 +1,15 @@
+.newsletterSubscribe{
+    .emailSubscription{
+        max-width: 435px;
+    }
+    .form-control{
+        height: 48px;
+        letter-spacing: 0.07em;
+        &::placeholder{
+            color: #fff;
+        }
+        &:focus{
+            background-color: var(--purple)
+        }
+    }
+}

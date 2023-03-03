@@ -1,0 +1,60 @@
+.ceoSlider {
+    background: linear-gradient(108.24deg, #FFEFED 7.25%, #FFF9F2 35.77%, #FFF0EE 62.56%, #FFF8F7 90.22%);
+}
+
+.ceoSlideItem {
+    cursor: pointer;
+    border: 2px solid #FDEAA8;
+
+    .videoTime {
+        background: rgba(255, 255, 255, 0.75);
+        top: 15px;
+        left: 15px;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    .author {
+        .userIcon {
+            width: 50px;
+            height: 50px;
+            background-color: #F9EEE7;
+            line-height: 50px;
+        }
+    }
+
+    .videoThumbImg {
+        img {
+            transition: all 0.3s linear;
+        }
+    }
+
+    .videoTime {
+        &:focus, &.active {
+            background-color: #fff !important;
+            color: var(--orange) !important;
+        }
+    }
+
+    &:hover {
+        .item-title {
+            a {
+                color: var(--orange);
+            }
+        }
+
+        .videoTime {
+            background-color: #fff;
+            color: var(--orange);
+        }
+
+        .videoThumbImg {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+}

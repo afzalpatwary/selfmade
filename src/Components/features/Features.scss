@@ -1,0 +1,8 @@
+.featuresItems {
+    @media (max-width:991px) {
+        &.order-1 {
+            order: -1 !important;
+            flex-basis: 100%;
+        }
+    }
+}
